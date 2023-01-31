@@ -41,24 +41,24 @@ public class Evenbetter extends JuniorRobot
 
 	public void onHitByBullet() 
 	{
-     	if (hitByBulletAngle != -1) 
+     		if (hitByBulletAngle != -1) 
 		{
-            turnRight(hitByBulletAngle);
-            ahead(fieldHeight / 5);
-        }
+            		turnRight(hitByBulletAngle);
+           		 ahead(fieldHeight / 5);
+        	}
 	}
 	
 
 	public void onHitWall() 
 	{
-	 	walls_hit ++;
+	 	walls_hit = walls_hit + 1;
 	 	
 		if (walls_hit < 5)
 	 	{
-	 		turnRight(180);
-     		ahead(fieldHeight / 5);
+			turnRight(180);
+     			ahead(fieldHeight / 5);
 	 	}
-    	 if (walls_hit > 5)
+    	 	if (walls_hit > 5)
 	 	{
 			back(fieldHeight / 2);
 		}
